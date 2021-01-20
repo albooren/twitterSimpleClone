@@ -2,18 +2,7 @@
 # platform :ios, '9.0'
 
 target 'bootCamp' do
-  # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
   pod 'Alamofire'
-  # Pods for bootCamp
-
-  target 'bootCampTests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
-  target 'bootCampUITests' do
-    # Pods for testing
-  end
-
+  pod 'SDWebImage'
 end

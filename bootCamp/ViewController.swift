@@ -6,12 +6,11 @@
 //
 
 import UIKit
+import SDWebImage
 
-class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, TweetViewModelDelegate {
     
     @IBOutlet weak var tweettableView: UITableView!
-    
-    var tweetlast = [String]()
     
     var tweetViewModel = TweetViewModel()
    
@@ -19,27 +18,23 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         super.viewDidLoad()
         let nib = UINib(nibName: "TweetTableViewCell", bundle: nil)
         tweettableView.register(nib, forCellReuseIdentifier: "TweetTableViewCell")
+        tweetViewModel.delegate = self
         tweettableView.delegate = self
         tweettableView.dataSource = self
-        setData()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        setData()
-        tweettableView.reloadData()
-    }
-    
-    func setData() {
-        let userDefaults = UserDefaults.standard
-        if let lastTweetArray = userDefaults.object(forKey: "tweetSend") as? [String] {
-            tweetlast = lastTweetArray
-        }
     }
     
     @IBAction func tweetButtonClicked(_ sender: UIBarButtonItem) {
         
         performSegue(withIdentifier: "toTweeting", sender: nil)
+    }
+    
+    func setTweet(_ tweets: [TweetModel]) {
+        tweetViewModel.tweets = tweets
+        tweettableView.reloadData()
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -47,12 +42,16 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return tweetlast.count
+        return tweetViewModel.tweets.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "TweetTableViewCell") as? TweetTableViewCell {
-            
+            let url = URL(string: tweetViewModel.tweets[indexPath.row].imageUrl ?? "")
+            cell.tweetsOwnerImageView.sd_imageIndicator = SDWebImageActivityIndicator.grayLarge
+            cell.tweetsOwnerImageView.sd_setImage(with: url, completed: nil)
+            cell.titleNameLabel.text = tweetViewModel.tweets[indexPath.row].username
+            cell.tweetingArea.text = tweetViewModel.tweets[indexPath.row].description
             return cell
         } else {
             return UITableViewCell()
@@ -65,7 +64,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            tweetlast.remove(at: indexPath.row)
+            tweetViewModel.tweets.remove(at: indexPath.row)
             if var temp = UserDefaults.standard.object(forKey: "tweetSend") as? [String] {
                 temp.remove(at: indexPath.row)
                 UserDefaults.standard.set(temp, forKey: "tweetSend")

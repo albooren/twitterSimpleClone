@@ -7,15 +7,23 @@
 
 import Foundation
 
+protocol TweetViewModelDelegate: class {
+    func setTweet(_ tweets: [TweetModel])
+}
+
 class TweetViewModel {
     
-    var tweets = [String]()
+    var tweets = [TweetModel]()
+    weak var delegate: TweetViewModelDelegate?
     
     init() {
         getTweet()
     }
     
     func getTweet() {
-        
+        NetworkManager.shared.getTweetFrom(completion: { [weak self] (result) in
+            guard let self = self else { return }
+            self.delegate?.setTweet(result.tweets)
+        })
     }
 }
