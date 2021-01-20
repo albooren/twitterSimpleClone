@@ -3,10 +3,18 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		008680DF25B87EF600201535 /* TweetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008680DE25B87EF600201535 /* TweetModel.swift */; };
+		008680E425B87FC600201535 /* TweetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008680E325B87FC600201535 /* TweetViewModel.swift */; };
+		008680EC25B8807F00201535 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008680EB25B8807F00201535 /* NetworkManager.swift */; };
+		0086810A25B8812200201535 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0086810925B8812200201535 /* Alamofire.framework */; };
+		0086810B25B8812200201535 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0086810925B8812200201535 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		209FE0EE848A1171A0C3A974 /* Pods_bootCampTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D765304B821EB225D538C1DB /* Pods_bootCampTests.framework */; };
+		2B914E161967DD0FC104C9BE /* Pods_bootCamp_bootCampUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 890983022683DA7470BDACEB /* Pods_bootCamp_bootCampUITests.framework */; };
+		BA9BF1F6D5CD225EF9E3E965 /* Pods_bootCamp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05DA1A8CB280C34A1BB0D0D0 /* Pods_bootCamp.framework */; };
 		C96EFB48257FBCC5003244A6 /* TweetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96EFB47257FBCC5003244A6 /* TweetViewController.swift */; };
 		C9ADCF8C257E73C600223EBC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9ADCF8B257E73C600223EBC /* AppDelegate.swift */; };
 		C9ADCF8E257E73C600223EBC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9ADCF8D257E73C600223EBC /* SceneDelegate.swift */; };
@@ -37,7 +45,31 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		0086810C25B8812300201535 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				0086810B25B8812200201535 /* Alamofire.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		008680DE25B87EF600201535 /* TweetModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetModel.swift; sourceTree = "<group>"; };
+		008680E325B87FC600201535 /* TweetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetViewModel.swift; sourceTree = "<group>"; };
+		008680EB25B8807F00201535 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		0086810925B8812200201535 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		05DA1A8CB280C34A1BB0D0D0 /* Pods_bootCamp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_bootCamp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		231BE00DC0B8642A903C167F /* Pods-bootCamp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bootCamp.release.xcconfig"; path = "Target Support Files/Pods-bootCamp/Pods-bootCamp.release.xcconfig"; sourceTree = "<group>"; };
+		50D2F2CA3922CD67F9FCE3F7 /* Pods-bootCamp-bootCampUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bootCamp-bootCampUITests.release.xcconfig"; path = "Target Support Files/Pods-bootCamp-bootCampUITests/Pods-bootCamp-bootCampUITests.release.xcconfig"; sourceTree = "<group>"; };
+		890983022683DA7470BDACEB /* Pods_bootCamp_bootCampUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_bootCamp_bootCampUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F436AD25C3CE6F6BAE2329E /* Pods-bootCamp-bootCampUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bootCamp-bootCampUITests.debug.xcconfig"; path = "Target Support Files/Pods-bootCamp-bootCampUITests/Pods-bootCamp-bootCampUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		90D7344CA8F374752EBBAF69 /* Pods-bootCampTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bootCampTests.release.xcconfig"; path = "Target Support Files/Pods-bootCampTests/Pods-bootCampTests.release.xcconfig"; sourceTree = "<group>"; };
 		C96EFB47257FBCC5003244A6 /* TweetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetViewController.swift; sourceTree = "<group>"; };
 		C9ADCF88257E73C600223EBC /* bootCamp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bootCamp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9ADCF8B257E73C600223EBC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -55,6 +87,9 @@
 		C9ADCFAF257E73C800223EBC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C9ADCFCE257E76B400223EBC /* TweetTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetTableViewCell.swift; sourceTree = "<group>"; };
 		C9ADCFCF257E76B400223EBC /* TweetTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TweetTableViewCell.xib; sourceTree = "<group>"; };
+		D765304B821EB225D538C1DB /* Pods_bootCampTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_bootCampTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E23FA6A16B460EACFE72B5BD /* Pods-bootCampTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bootCampTests.debug.xcconfig"; path = "Target Support Files/Pods-bootCampTests/Pods-bootCampTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E7B2DE967121D78DA24D5E8A /* Pods-bootCamp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bootCamp.debug.xcconfig"; path = "Target Support Files/Pods-bootCamp/Pods-bootCamp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +97,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA9BF1F6D5CD225EF9E3E965 /* Pods_bootCamp.framework in Frameworks */,
+				0086810A25B8812200201535 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,6 +106,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				209FE0EE848A1171A0C3A974 /* Pods_bootCampTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,12 +114,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B914E161967DD0FC104C9BE /* Pods_bootCamp_bootCampUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		13BB71BECDF54F76B20B2DF5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0086810925B8812200201535 /* Alamofire.framework */,
+				05DA1A8CB280C34A1BB0D0D0 /* Pods_bootCamp.framework */,
+				890983022683DA7470BDACEB /* Pods_bootCamp_bootCampUITests.framework */,
+				D765304B821EB225D538C1DB /* Pods_bootCampTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8273B078FAE7434CDB102411 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E7B2DE967121D78DA24D5E8A /* Pods-bootCamp.debug.xcconfig */,
+				231BE00DC0B8642A903C167F /* Pods-bootCamp.release.xcconfig */,
+				8F436AD25C3CE6F6BAE2329E /* Pods-bootCamp-bootCampUITests.debug.xcconfig */,
+				50D2F2CA3922CD67F9FCE3F7 /* Pods-bootCamp-bootCampUITests.release.xcconfig */,
+				E23FA6A16B460EACFE72B5BD /* Pods-bootCampTests.debug.xcconfig */,
+				90D7344CA8F374752EBBAF69 /* Pods-bootCampTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		C9ADCF7F257E73C600223EBC = {
 			isa = PBXGroup;
 			children = (
@@ -89,6 +152,8 @@
 				C9ADCFA1257E73C800223EBC /* bootCampTests */,
 				C9ADCFAC257E73C800223EBC /* bootCampUITests */,
 				C9ADCF89257E73C600223EBC /* Products */,
+				8273B078FAE7434CDB102411 /* Pods */,
+				13BB71BECDF54F76B20B2DF5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -108,6 +173,7 @@
 				C9ADCF8B257E73C600223EBC /* AppDelegate.swift */,
 				C9ADCF8D257E73C600223EBC /* SceneDelegate.swift */,
 				C9ADCF8F257E73C600223EBC /* ViewController.swift */,
+				008680DE25B87EF600201535 /* TweetModel.swift */,
 				C96EFB47257FBCC5003244A6 /* TweetViewController.swift */,
 				C9ADCF91257E73C600223EBC /* Main.storyboard */,
 				C9ADCFCE257E76B400223EBC /* TweetTableViewCell.swift */,
@@ -115,6 +181,8 @@
 				C9ADCF94257E73C800223EBC /* Assets.xcassets */,
 				C9ADCF96257E73C800223EBC /* LaunchScreen.storyboard */,
 				C9ADCF99257E73C800223EBC /* Info.plist */,
+				008680E325B87FC600201535 /* TweetViewModel.swift */,
+				008680EB25B8807F00201535 /* NetworkManager.swift */,
 			);
 			path = bootCamp;
 			sourceTree = "<group>";
@@ -144,9 +212,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C9ADCFB2257E73C800223EBC /* Build configuration list for PBXNativeTarget "bootCamp" */;
 			buildPhases = (
+				FE302267E25C956D88B4E87A /* [CP] Check Pods Manifest.lock */,
 				C9ADCF84257E73C600223EBC /* Sources */,
 				C9ADCF85257E73C600223EBC /* Frameworks */,
 				C9ADCF86257E73C600223EBC /* Resources */,
+				FF24DCC68602BCFDC48DED9C /* [CP] Embed Pods Frameworks */,
+				0086810C25B8812300201535 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -161,6 +232,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C9ADCFB5257E73C800223EBC /* Build configuration list for PBXNativeTarget "bootCampTests" */;
 			buildPhases = (
+				D3A3E9FFA5AD8BE5E5FE4229 /* [CP] Check Pods Manifest.lock */,
 				C9ADCF9A257E73C800223EBC /* Sources */,
 				C9ADCF9B257E73C800223EBC /* Frameworks */,
 				C9ADCF9C257E73C800223EBC /* Resources */,
@@ -179,9 +251,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C9ADCFB8257E73C800223EBC /* Build configuration list for PBXNativeTarget "bootCampUITests" */;
 			buildPhases = (
+				2693F831618112E9C3360972 /* [CP] Check Pods Manifest.lock */,
 				C9ADCFA5257E73C800223EBC /* Sources */,
 				C9ADCFA6257E73C800223EBC /* Frameworks */,
 				C9ADCFA7257E73C800223EBC /* Resources */,
+				C4FF303E757ADB81FE646FB0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -263,14 +337,120 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2693F831618112E9C3360972 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-bootCamp-bootCampUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C4FF303E757ADB81FE646FB0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-bootCamp-bootCampUITests/Pods-bootCamp-bootCampUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-bootCamp-bootCampUITests/Pods-bootCamp-bootCampUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-bootCamp-bootCampUITests/Pods-bootCamp-bootCampUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D3A3E9FFA5AD8BE5E5FE4229 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-bootCampTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FE302267E25C956D88B4E87A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-bootCamp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FF24DCC68602BCFDC48DED9C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-bootCamp/Pods-bootCamp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-bootCamp/Pods-bootCamp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-bootCamp/Pods-bootCamp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C9ADCF84257E73C600223EBC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				C9ADCF90257E73C600223EBC /* ViewController.swift in Sources */,
+				008680E425B87FC600201535 /* TweetViewModel.swift in Sources */,
 				C9ADCF8C257E73C600223EBC /* AppDelegate.swift in Sources */,
 				C96EFB48257FBCC5003244A6 /* TweetViewController.swift in Sources */,
+				008680EC25B8807F00201535 /* NetworkManager.swift in Sources */,
+				008680DF25B87EF600201535 /* TweetModel.swift in Sources */,
 				C9ADCF8E257E73C600223EBC /* SceneDelegate.swift in Sources */,
 				C9ADCFD0257E76B400223EBC /* TweetTableViewCell.swift in Sources */,
 			);
@@ -445,11 +625,13 @@
 		};
 		C9ADCFB3257E73C800223EBC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E7B2DE967121D78DA24D5E8A /* Pods-bootCamp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = TF4J9QSD99;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = bootCamp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -457,6 +639,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = alperenkisi.bootCamp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -464,11 +647,13 @@
 		};
 		C9ADCFB4257E73C800223EBC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 231BE00DC0B8642A903C167F /* Pods-bootCamp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = TF4J9QSD99;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = bootCamp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -476,6 +661,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = alperenkisi.bootCamp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -483,6 +669,7 @@
 		};
 		C9ADCFB6257E73C800223EBC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E23FA6A16B460EACFE72B5BD /* Pods-bootCampTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -505,6 +692,7 @@
 		};
 		C9ADCFB7257E73C800223EBC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 90D7344CA8F374752EBBAF69 /* Pods-bootCampTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -527,6 +715,7 @@
 		};
 		C9ADCFB9257E73C800223EBC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8F436AD25C3CE6F6BAE2329E /* Pods-bootCamp-bootCampUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -547,6 +736,7 @@
 		};
 		C9ADCFBA257E73C800223EBC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 50D2F2CA3922CD67F9FCE3F7 /* Pods-bootCamp-bootCampUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

@@ -12,6 +12,8 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     @IBOutlet weak var tweettableView: UITableView!
     
     var tweetlast = [String]()
+    
+    var tweetViewModel = TweetViewModel()
    
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,9 +52,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "TweetTableViewCell") as? TweetTableViewCell {
-            cell.titleNameLabel.text = "Alperen Kişi"
-            cell.tweetsOwnerImageView.image = UIImage(systemName: "person.fill")
-            cell.tweetingArea.text = tweetlast[indexPath.row]
+            
             return cell
         } else {
             return UITableViewCell()
